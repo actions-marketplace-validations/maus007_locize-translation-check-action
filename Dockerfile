@@ -13,4 +13,6 @@ RUN chmod +x /docker-enytpoint.sh
 RUN pip install --no-cache-dir -r requirements.txt
 
 
-ENTRYPOINT ["/docker-enytpoint.sh"]
+#ENTRYPOINT ["/docker-enytpoint.sh"]
+
+CMD ["python3", "/home/app/main.py"]
