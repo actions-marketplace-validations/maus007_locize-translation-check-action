@@ -1,5 +1,9 @@
 name: 'LocizeTranslationCkecj'
 description: 'locize translation check action'
+author: 'Misha Serbeniuk'
+branding:
+  icon: check
+  color: blue
 inputs:
   version:
     description: 'Version of locize translation'
