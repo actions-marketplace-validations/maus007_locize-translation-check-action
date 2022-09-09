@@ -1,3 +1,3 @@
 #!/bin/sh
 
-python /home/app/main.py
+python /home/app/main.py "$@"
