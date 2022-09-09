@@ -1,3 +1,3 @@
 #!/bin/sh
 
-python3 /home/app/main.py $@
+python3 /github/workspace/main.py $@
