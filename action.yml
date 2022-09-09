@@ -1,0 +1,32 @@
+name: 'LocizeTranslationCkecj'
+description: 'locize translation check action'
+inputs:
+  version:
+    description: 'Version of locize translation'
+    required: true
+  namespace:
+    description: 'Locize namespace'
+    required: true
+  language:
+    description: 'Locize language code'
+    required: true
+  translation_percent:
+    description: 'Percent of minimal translation'
+    required: true
+    default: 100
+  untranslated_percent:
+    description: 'Percent of maximal untranslated'
+    required: true
+    default: 0
+outputs:
+  translationstable:
+    description: 'Table with information about translations'
+runs:
+  using: 'docker'
+  image: 'Dockerfile'
+  args:
+    - ${{ inputs.version }}
+    - ${{ inputs.namespace}}
+    - ${{ inputs.language }}
+    - ${{ inputs.translation_percent }}
+    - ${{ inputs.untranslated_percent }}
