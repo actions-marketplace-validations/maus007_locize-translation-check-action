@@ -1,0 +1,1 @@
+# locize-translation-check-action
