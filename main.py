@@ -8,11 +8,11 @@ from markdownTable import markdownTable
 
 locize_project_id = os.environ["LOCIZE_PROJECT_ID"]
 locize_api_key = os.environ["LOCIZE_API_KEY"]
-locize_version = sys.argv[1]
-locize_namespace = sys.argv[2]
-language = sys.argv[3]
-translation_percent = sys.argv[4]
-untranslated_percent = sys.argv[5]
+locize_version = os.environ["INPUT_VERSION"]
+locize_namespace = os.environ["INPUT_NAMESPACE"]
+language = os.environ["INPUT_LANGUAGE"]
+translation_percent = os.environ["INPUT_TRANSLATION_PERCENT"]
+untranslated_percent = os.environ["INPUT_UNTRANSLATED_PERCENT"]
 
 
 x = requests.get('https://api.locize.app/stats/project/' + str(locize_project_id), headers={"Authorization": "Bearer %s"  % locize_api_key})

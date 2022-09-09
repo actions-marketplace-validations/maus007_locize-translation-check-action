@@ -2,10 +2,10 @@ FROM python:3.9.14-alpine3.16
 
 RUN mkdir -p /github/workspace/
 
-WORKDIR /github/workspace/
+WORKDIR /home/app/
 
-COPY ./main.py /github/workspace/
-COPY ./requirements.txt /github/workspace/
+COPY ./main.py /home/app/main.py
+COPY ./requirements.txt  /home/app/requirements.txt
 COPY ./docker-enytpoint.sh /docker-enytpoint.sh
 
 RUN chmod +x /docker-enytpoint.sh
